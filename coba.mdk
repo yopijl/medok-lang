@@ -1,0 +1,5 @@
+nomer = [1, 2, 3, 4, 5]
+jumlah = 0
+nggo nomer_ning number:
+    jumlah = jumlah + number
+cetak jumlah

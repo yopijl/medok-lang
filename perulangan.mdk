@@ -1,0 +1,4 @@
+nggo i=0 nganti 10 mongko cetak i
+
+x="Cetak kalimat ini sebanyak 3 kali"
+nggo i=0 nganti 3 mongko cetak x

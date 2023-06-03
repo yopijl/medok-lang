@@ -1,0 +1,4 @@
+x=0
+a="nilai x adalah 0"
+b="nilai x bukan 0"
+nek x==0 mongko cetak a liyane cetak b

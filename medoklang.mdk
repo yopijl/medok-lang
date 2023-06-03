@@ -1,0 +1,8 @@
+fungsi paswordnya() --> cetak "Full senyum masszzehhh"
+fungsi kabarnya() --> cetak "Jangan sedihh bossquuee"
+
+nggo i=0 nganti 3 mongko paswordnya()
+
+x=0
+b="nilai x bukan 0"
+nek x==0 mongko kabarnya() liyane cetak b
