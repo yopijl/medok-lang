@@ -4,7 +4,7 @@ class leksikal(Lexer):
     tokens = { PRINT, NAME, NUMBER, STRING, IF, THEN, ELSE, FOR, FUN, TO, ARROW, EQEQ }
     ignore = '\t '
 
-    literals = { '=', '+', '-', '/', '*', '(', ')', ',', ';', ':' }
+    literals = { '=', '+', '-', '/', '*', '(', ')', ',', ';' }
 
     PRINT = r'cetak'
     IF = r'nek'
@@ -15,8 +15,8 @@ class leksikal(Lexer):
     FUN = r'fungsi'
     ARROW = r'-->'
     NAME = r'[a-zA-Z_][a-zA-Z0-9_]*'
-    STRING = r'\".*?\"'
-    
+    STRING = r'"[^"]*"'
+
     EQEQ = r'=='
 
     @_(r'\d+')
@@ -29,21 +29,25 @@ class leksikal(Lexer):
         pass
 
     @_(r'\n+')
-    def newline(self,t ):
+    def newline(self, t):
         self.lineno = t.value.count('\n')
 
     def error(self, t):
-        print(f"Terdapat karakter yang tidak dikenali: '{t.value[0]}'")
-        self.index += 1
+        raise ValueError(f"Karakter ilegal '{t.value[0]}' di indeks {t.index}")
+
 
 if __name__ == '__main__':
     lexer = leksikal()
+    env = {}
     while True:
         try:
             text = input('medok > ')
         except EOFError:
             break
         if text:
-            lex = lexer.tokenize(text)
-            for token in lex:
-                print(token)
+            try:
+                lex = lexer.tokenize(text)
+                for token in lex:
+                    print(token)
+            except Exception as e:
+                print("Ana kesalahan:", str(e))

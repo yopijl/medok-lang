@@ -1,0 +1,70 @@
+#ANALISIS SINTAKSI DI Lexer
+cetak "Hello, World!"
+nek x == 5 mongko cetak "Nilai x sama dengan 5."
+
+
+
+#ANALISIS SINTAKSI DI Parser
+cetak 5 + 3
+x = 10
+nek x == 10 mongko cetak "Nilai x adalah 10" liyane cetak "Nilai x bukan 10"
+fungsi hello() --> cetak "Halo, Medok!"
+nggo x nganti 1 mongko cetak x
+nggo x=0 nganti 1 mongko cetak x
+
+
+
+#ANALISIS SEMANTIK, KODE ANTARA, PEMBANGKITAN KODE
+x = 5 + 3 * 2
+
+y = x / 4
+
+cetak y
+
+nek 5 == 5 mongko cetak "Benar" liyane cetak "Salah"
+
+5 + 3
+
+Say = "Halo, dunia!"
+cetak Say
+
+nek 5 == 5 mongko cetak"Angka 5 pada karo 5" liyane cetak"Angka 5 ora pada karo 5"
+
+nek 4 == 5 mongko cetak"Angka 4 pada karo 5" liyane cetak"Angka 4 ora pada karo 5"
+
+nggo i = 0 nganti 5 mongko cetak "Ngopi maseh"
+
+nggo i = 0 nganti 5 mongko cetak i 
+
+fungsi tambah() --> cetak 5 + 3
+tambah()
+
+fungsi katakatadinaikimaseh() --> cetak "Sesuk preiiiii mbake"
+katakatadinaikimaseh()
+
+
+
+#PENGUJIAN PENANGANAN MASALAH
+
+cetak x
+
+hasil = 10 / 0
+
+panggil_fungsi()
+
+
+
+
+#CETAK TABEL INFORMASI 
+
+tabin 
+
+
+
+#LOOP-FOR
+
+nggo i = 1 nganti 5 mongko cetak "aku bahagia"
+
+
+
+
